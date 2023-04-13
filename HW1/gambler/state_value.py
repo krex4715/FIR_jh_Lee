@@ -140,4 +140,4 @@ def plot_expected_results(P_h,theta=1e-30):
 
 
 
-optimal_plot_results(0.4,theta=1e-100)  # Example
+optimal_plot_results(0.25,theta=1e-3)  # Example

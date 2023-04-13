@@ -25,4 +25,16 @@ python state_value.py
 
 
 
+
+### Ph=0.25
+![img1](./img/gambler_res_025.png)
+
+
+### Ph=0.55
+![img1](./img/gambler_res_055.png)
+
+
+### Ph=0.4 (Same With Sutton's Book ex 4.3)
 ![img1](./img/gambler_res.png)
+
+
