@@ -8,17 +8,15 @@ I implemented DP with two different ways: Bellman Optimality Equation and Bellma
 Action-Value based DP is implementeted with Q_action value.
 
 
-
-
 There is no big difference in three methods.
 
 
 
-action value graph
+action value dp method
 ```bash
 python action_value.py
 ```
-state value graph
+state value dp method
 ```bash
 python state_value.py
 ```
