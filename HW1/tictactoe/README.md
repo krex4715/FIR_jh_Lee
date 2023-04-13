@@ -4,11 +4,11 @@
 I have implemented Tic Tac Toe Game with MC and TD Policy Evaluation.
 
 
-## Monte Carlo Policy Evaluation
+### Monte Carlo Policy Evaluation
 By using Monte Carlo Policy Evaluation, I can get the optimal First Action of the game.
 
 
-## Temporal Difference Policy Evaluation
+### Temporal Difference Policy Evaluation
 By using Temporal Difference Policy Evaluation, I can compare the convergence speed of the two methods.
 
 
