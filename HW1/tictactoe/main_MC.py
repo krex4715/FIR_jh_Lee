@@ -3,6 +3,9 @@ from env import TicTacToeEnv
 import random
 import numpy as np
 from copy import deepcopy
+import matplotlib.colors as mcolors
+
+
 
 def available_actions(board):
     actions = []
@@ -14,8 +17,6 @@ def available_actions(board):
 
 def state_to_tuple(board):
     return tuple(board.flatten())
-
-
 
 
 
@@ -111,8 +112,31 @@ def main_MC(env, total_eps = 10000, rendering=False):
 
 if __name__=="__main__":
     env=TicTacToeEnv()
-    mc_convergence,_ = main_MC(env, total_eps=10000, rendering=False)
+    mc_convergence,mc_init_q = main_MC(env, total_eps=50000, rendering=False)
     
-    plt.figure(figsize=(10, 5))
-    plt.plot(mc_convergence)
+    
+    mc_init_q_2d = np.array(mc_init_q).reshape(3, 3)
+    
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 5))
+    # First Graph
+    ax1.set_title('Initial Q-Table')
+    min_val = mc_init_q_2d.min()
+    max_val = mc_init_q_2d.max()
+    norm = mcolors.Normalize(vmin=min_val, vmax=max_val)
+    cax = ax1.matshow(mc_init_q_2d, cmap='coolwarm', norm=norm)
+    for i in range(3):
+        for j in range(3):
+            ax1.text(j, i, f"{mc_init_q_2d[i, j]:.5f}", ha="center", va="center", color="w")
+    ax1.set_xticks(np.arange(-0.5, 2.5, 1), minor=True)
+    ax1.set_yticks(np.arange(-0.5, 2.5, 1), minor=True)
+    ax1.grid(which="minor", color="black", linewidth=2)
+    ax1.set_xticks([])
+    ax1.set_yticks([])
+        
+
+    # Second Graph
+    # only first 5000 episodes to show convergence
+    ax2.set_title('Convergence of MC')
+    ax2.plot(mc_convergence[0:5000] ,label="MC")
+    ax2.legend()
     plt.show()

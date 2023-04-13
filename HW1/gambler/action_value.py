@@ -49,7 +49,7 @@ def plot_results(P_h):
     ax[0].set_ylabel('Value estimates')
     ax[0].set_title(f'Value estimates for P_h = {P_h}')
 
-    ax[1].plot(policy)
+    ax[1].bar(range(100),policy)
     ax[1].set_xlabel('Capital')
     ax[1].set_ylabel('Final policy (stake)')
     ax[1].set_title(f'Final policy for P_h = {P_h}')

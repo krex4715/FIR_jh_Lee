@@ -76,13 +76,6 @@ def main_TD(env, alpha = 0.1, total_eps = 10000, rendering=False):
         prev_q_table = env.q_table[(0, 0, 0, 0, 0, 0, 0, 0, 0)].copy()
 
 
-    # init_q = env.q_table[(0, 0, 0, 0, 0, 0, 0, 0, 0)]
-    # print("initial state q_table : ", init_q)
-
-    # # grid position of q_table
-    # max = np.argmax(init_q)
-    # row, col = max // 3, max % 3
-    # print(f"Best First Move : {row} ,{col}")
 
     if rendering:
         plt.ioff()
@@ -95,8 +88,4 @@ def main_TD(env, alpha = 0.1, total_eps = 10000, rendering=False):
 
 if __name__ == "__main__":
     env = TicTacToeEnv()
-    td_convergence = main_TD(env, alpha = 0.1, total_eps = 10000, rendering=False)
-    
-    plt.figure(figsize=(10, 5))
-    plt.plot(td_convergence)
-    plt.show()
+    td_convergence = main_TD(env, alpha = 0.1, total_eps = 1000, rendering=False)
