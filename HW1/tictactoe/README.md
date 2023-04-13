@@ -30,3 +30,9 @@ python main_MC.py
 ```bash
 python main_TD.py
 ```
+
+
+***
+
+
+![img1](./img/tictactoe.png)
