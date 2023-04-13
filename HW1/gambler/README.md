@@ -25,4 +25,4 @@ python state_value.py
 
 
 
-[img1](./img/gambler_res.png)
+![img1](./img/gambler_res.png)
