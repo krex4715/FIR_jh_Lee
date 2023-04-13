@@ -35,4 +35,4 @@ python main_TD.py
 ***
 
 
-![img1](./img/TicTacToe.png)
+![img1](./TicTacToe.png)
