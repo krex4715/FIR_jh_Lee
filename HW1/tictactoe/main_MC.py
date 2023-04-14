@@ -18,6 +18,26 @@ def available_actions(board):
 def state_to_tuple(board):
     return tuple(board.flatten())
 
+def get_symmetric_states(state):
+    state_2d = np.array(state).reshape(3, 3)
+    symmetric_states = [state_2d]
+
+    # Rotatation 90, 180, 270 degrees
+    for _ in range(3):
+        state_2d = np.rot90(state_2d)
+        symmetric_states.append(state_2d)
+
+    # Mirroring
+    mirrored_state = np.fliplr(state_2d)
+    symmetric_states.append(mirrored_state)
+    for _ in range(3):
+        mirrored_state = np.rot90(mirrored_state)
+        symmetric_states.append(mirrored_state)
+
+    return [tuple(s.flatten()) for s in symmetric_states]
+
+
+
 
 
 
@@ -76,9 +96,22 @@ def main_MC(env, total_eps = 10000, rendering=False):
             if sa_pair not in visited_pairs:
                 visited_pairs.add(sa_pair)
 
+                # if state_tuple not in env.q_table:
+                #     env.q_table[state_tuple] = np.zeros(9)
+                #     env.visit_counts[state_tuple] = np.zeros(9)
+
                 if state_tuple not in env.q_table:
-                    env.q_table[state_tuple] = np.zeros(9)
-                    env.visit_counts[state_tuple] = np.zeros(9)
+                    symmetric = get_symmetric_states(state)
+                    symmetric_found = False
+                    for s in symmetric:
+                        if s in env.q_table:
+                            state_tuple = s
+                            symmetric_found = True
+                            break
+                    if not symmetric_found:
+                        env.q_table[state_tuple] = np.zeros(9)
+                        env.visit_counts[state_tuple] = np.zeros(9)
+
 
                 env.visit_counts[state_tuple][action] += 1
                 alpha = 1.0 / env.visit_counts[state_tuple][action]

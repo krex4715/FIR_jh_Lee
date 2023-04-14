@@ -12,7 +12,7 @@ if __name__=="__main__":
     print('--------Searching Best Init Action By using MC Evaluation--------')
     mc_convergence,mc_init_q = main_MC.main_MC(env, total_eps = 50000, rendering=False)
     print('--------MC,TD_Covnergence Comparison-----------------------------')
-    td_convergence = main_TD.main_TD(env, alpha = 0.1, total_eps = 100, rendering=False)
+    td_convergence = main_TD.main_TD(env, alpha = 0.2, total_eps = 100, rendering=False)
     print('plotting convergence: for Comparison, only plot the first 100 episodes--')
     print('TD is faster than MC, but MC is more accurate than TD')
     

@@ -13,6 +13,33 @@ By using Temporal Difference Policy Evaluation, I can compare the convergence sp
 
 
 
+### Symmetric States of Tic Tac Toe
+
+Rotating and mirroring the board will result in the same game state. Therefore, we can reduce the number of states by grouping the symmetric states together. The following function returns all the symmetric states of a given state.
+
+```python
+def get_symmetric_states(state):
+    state_2d = np.array(state).reshape(3, 3)
+    symmetric_states = [state_2d]
+
+    # Rotatation 90, 180, 270 degrees
+    for _ in range(3):
+        state_2d = np.rot90(state_2d)
+        symmetric_states.append(state_2d)
+
+    # Mirroring
+    mirrored_state = np.fliplr(state_2d)
+    symmetric_states.append(mirrored_state)
+    for _ in range(3):
+        mirrored_state = np.rot90(mirrored_state)
+        symmetric_states.append(mirrored_state)
+
+    return [tuple(s.flatten()) for s in symmetric_states]
+```
+
+
+
+
 ## How to run
 
 ### Convergence Speed Comparison of TD and MC
