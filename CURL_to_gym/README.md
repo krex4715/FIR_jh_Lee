@@ -1,3 +1,18 @@
+# CURL + Gym
+
+I used the CURL algorithm to learn the agent through the Pixel value in the [gym](https://www.gymlibrary.dev/) environment.
+
+
+
+[PixelObservationWrapper](https://www.gymlibrary.dev/api/wrappers/) was used to receive Raw Pixel as observation, not Physical State Value.
+
+
+
+
+
+
+***
+
 # CURL: Contrastive Unsupervised Representation Learning for Sample-Efficient Reinforcement Learning
 
 This repository is the official implementation of [CURL](https://mishalaskin.github.io/curl/) for the DeepMind control experiments. Atari experiments were done in a separate codebase available [here](https://github.com/aravindsrinivas/curl_rainbow). Our implementation of SAC is based on [SAC+AE](https://github.com/denisyarats/pytorch_sac_ae) by Denis Yarats. 
