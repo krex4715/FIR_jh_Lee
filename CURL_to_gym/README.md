@@ -20,7 +20,6 @@ bash ./script/run_pendulum.sh
 
 
 
-
 ## Result
 I compared the performance of CURL with the performance of SAC with physical state value environment.
 
