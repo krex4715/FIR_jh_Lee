@@ -45,7 +45,7 @@ I check the performance of CURL in 'CartPole' environment of the DM_Control
 |                                  |                                                |                                                |
 | :------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 |         `Step 5000`                |                 `Step 10000`                 |                   `Step 15000`                 |
-| ![step5000](./img/curl/5000.gif)   |         ![step10000](./img/curl/5000.gif)   |         ![step10000](./img/curl/15000.gif)     |
+| ![step5000](./img/curl/5000.gif)   |         ![step10000](./img/curl/10000.gif)   |         ![step10000](./img/curl/15000.gif)     |
 
 
 
