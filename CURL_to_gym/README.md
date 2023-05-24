@@ -4,13 +4,16 @@ I implemented the [CURL](https://github.com/MishaLaskin/curl) algorithm to learn
 [CURL(Contrastive Unsupervised Representation Learning for Sample-Efficient Reinforcement Learning)](https://github.com/MishaLaskin/curl) is a learning algorithm based on Raw Pixel Observations.
  
 I applied the CURL algorithm in the [gym](https://www.gymlibrary.dev/) environment, which doesn't use Pixel Observation but rather Physical Information Observation. This was accomplished by utilizing the [PixelObservationWrapper](https://www.gymlibrary.dev/api/wrappers/)
-
+   
+**Option**
 ```bash
 # Specific gym environment has dependency of Pyglet Version
 pip uninstall pyglet
 pip install pyglet==1.5.0
 ```
 
+
+**Pixel Observation Wrapping Method**
 ```python
 env = PixelObservationWrapper(gym.make(args.domain_name))
 ```
