@@ -32,12 +32,10 @@ Agent was trained in [DM_Control](https://github.com/deepmind/dm_control)
 I check the performance of CURL in CartPole environment in DM_Control
 |                                  |                                                |                                                |
 | :------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
-|         `Step 5000`                |                 `Step 10000`                 |                   `Step 10000`                 |
-| ![step5000](./img/5000_curl.gif)   |         ![step10000](./img/10000_curl.gif)   |         ![step10000](./img/10000_curl.gif)     |
-|         `Step 15000`               |             `Step 20000`                     |             `Step 20000`                       |
-| ![step15000](./img/15000_curl.gif) |    ![step20000](./img/20000_curl.gif)        |      ![step20000](./img/20000_curl.gif)        |
-|         `Step 25000`               |              `Step 30000`                    |              `Step 30000`                      |
-| ![step25000](./img/25000_curl.gif) |     ![step30000](./img/30000_curl.gif)       |          ![step30000](./img/30000_curl.gif)    |
+|         `Step 5000`                |                 `Step 10000`                 |                   `Step 15000`                 |
+| ![step5000](./img/5000_curl.gif)   |         ![step10000](./img/10000_curl.gif)   |         ![step10000](./img/15000_curl.gif)     |
+|         `Step 20000`               |             `Step 25000`                     |             `Step 30000`                       |
+| ![step15000](./img/20000_curl.gif) |    ![step20000](./img/25000_curl.gif)        |      ![step20000](./img/30000_curl.gif)        |
 
 
 
