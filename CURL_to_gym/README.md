@@ -41,19 +41,19 @@ Agent was trained in [DM_Control](https://github.com/deepmind/dm_control)
 
 ### Applying to Gym and Comparing the performance with Dynamic State based SAC
 
-**Raw Pixel Observation Based Learning CURL in gym**
+**Raw Pixel Observation Based Learning CURL in gym**   
 |                                  |                                                |                                                |
 | :------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 |         `Step 5000`                |                 `Step 10000`                 |                   `Step 15000`                 |
 | ![step5000](./img/curl/5000.gif)   |         ![step10000](./img/curl/10000.gif)   |         ![step10000](./img/curl/15000.gif)     |
 
 
-**Physical Observation Based Learning SAC in gym**
+**Physical Observation Based Learning SAC in gym**   
 [details of Observation](https://www.gymlibrary.dev/environments/classic_control/pendulum/)
 |                                  |                                                |                                                |
 | :------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 |         `Step 5000`                |                 `Step 10000`                 |                   `Step 15000`                 |
-| ![step5000](./img/sac/5000_curl.gif)   |         ![step10000](./img/sac/10000_curl.gif)   |         ![step10000](./img/sac/15000_curl.gif)     |
+| ![step5000](./img/sac/sac5000.gif)   |         ![step10000](./img/sac/sac10000.gif)   |         ![step10000](./img/sac/sac15000.gif)     |
 
 Even CURL is raw Pixel Based Learning Methods,
 but we can see the Sample Efficient of CURL :  CURL Algorithm learning was as good as learning with physical information. (in case of CartPole)
