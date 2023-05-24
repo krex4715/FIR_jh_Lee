@@ -4,7 +4,7 @@ I used the [CURL](https://github.com/MishaLaskin/curl) algorithm to learn the ag
 
 
 
-[PixelObservationWrapper](https://www.gymlibrary.dev/api/wrappers/) was used to receive Raw Pixel as observation, not Physical State Value.
+[PixelObservationWrapper](https://www.gymlibrary.dev/api/wrappers/) was used to receive Raw Pixel as observation, not Physical Information Observation.
 ```python
 env = PixelObservationWrapper(gym.make(args.domain_name))
 ```
@@ -21,7 +21,7 @@ bash ./script/run_pendulum.sh
 
 
 ## Result
-I compared the performance of CURL with the performance of SAC with physical state value environment.
+I compared the performance of CURL with the performance of SAC with physical Information Observation environment.
 
 ### Original CURL Performance in DM_Control
 in [CURL(Contrastive Unsupervised Representation Learning for Sample-Efficient Reinforcement Learning)](https://mishalaskin.github.io/curl/), 
