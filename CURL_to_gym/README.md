@@ -5,7 +5,9 @@ I used the CURL algorithm to learn the agent through the Pixel value in the [gym
 
 
 [PixelObservationWrapper](https://www.gymlibrary.dev/api/wrappers/) was used to receive Raw Pixel as observation, not Physical State Value.
-
+```python
+env = PixelObservationWrapper(gym.make(args.domain_name))
+```
 
 
 
