@@ -1,7 +1,7 @@
 # CURL + Gym
 
 I implemented the [CURL](https://github.com/MishaLaskin/curl) algorithm to learn the agent.    
-[CURL(Contrastive Unsupervised Representation Learning for Sample-Efficient Reinforcement Learning)](https://github.com/MishaLaskin/curl) is a learning algorithm based on Raw Pixel Observations.
+CURL(Contrastive Unsupervised Representation Learning for Sample-Efficient Reinforcement Learning) is a learning algorithm based on Raw Pixel Observations.
  
 I applied the CURL algorithm in the [gym](https://www.gymlibrary.dev/) environment, which doesn't use Pixel Observation but rather Physical Information Observation. This was accomplished by utilizing the [PixelObservationWrapper](https://www.gymlibrary.dev/api/wrappers/)
    
