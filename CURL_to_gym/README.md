@@ -29,7 +29,7 @@ in [CURL(Contrastive Unsupervised Representation Learning for Sample-Efficient R
 Agent was trained in [DM_Control](https://github.com/deepmind/dm_control)
 
 
-I check the performance of CURL in CartPole environment in DM_Control
+I check the performance of CURL in 'CartPole' environment of the DM_Control
 |                                  |                                                |                                                |
 | :------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 |         `Step 5000`                |                 `Step 10000`                 |                   `Step 15000`                 |
@@ -40,5 +40,13 @@ I check the performance of CURL in CartPole environment in DM_Control
 
 
 ## Applying to Gym and Comparing the performance with Dynamic State based SAC
+
+### Raw Pixel Based Learning CURL in gym
+|                                  |                                                |                                                |
+| :------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
+|         `Step 5000`                |                 `Step 10000`                 |                   `Step 15000`                 |
+| ![step5000](./img/curl/5000.gif)   |         ![step10000](./img/curl/5000.gif)   |         ![step10000](./img/curl/15000.gif)     |
+
+
 
 
