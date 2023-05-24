@@ -47,7 +47,7 @@ Even CURL is raw Pixel Based Learning Methods,
 but we can see the Sample Efficient of CURL :  CURL Algorithm learning was as good as learning with physical information. (in case of CartPole)     
 
 
-Below is the [SAC](https://github.com/vy007vikas/PyTorch-ActorCriticRL) learning algorithm in the Physical Observation of [gym](https://www.gymlibrary.dev/environments/)
+
 
 ### Applying to Gym and Comparing the performance with Dynamic State based SAC
 
@@ -57,7 +57,8 @@ Below is the [SAC](https://github.com/vy007vikas/PyTorch-ActorCriticRL) learning
 |         `Step 5000`                |                 `Step 10000`                 |                   `Step 15000`                 |
 | ![step5000](./img/curl/5000.gif)   |         ![step10000](./img/curl/10000.gif)   |         ![step10000](./img/curl/15000.gif)     |
 
-
+Below is the [SAC](https://github.com/vy007vikas/PyTorch-ActorCriticRL) learning algorithm in the Physical Observation of [gym](https://www.gymlibrary.dev/environments/)   
+   
 **Physical Observation Based Learning SAC in gym**   
 [details of Observation](https://www.gymlibrary.dev/environments/classic_control/pendulum/)
 |                                  |                                                |                                                |
