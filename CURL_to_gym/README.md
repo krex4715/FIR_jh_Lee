@@ -5,11 +5,15 @@ I implemented the [CURL](https://github.com/MishaLaskin/curl) algorithm to learn
  
 I applied the CURL algorithm in the [gym](https://www.gymlibrary.dev/) environment, which doesn't use Pixel Observation but rather Physical Information Observation. This was accomplished by utilizing the [PixelObservationWrapper](https://www.gymlibrary.dev/api/wrappers/)
 
+```bash
+# Specific gym environment has dependency of Pyglet Version
+pip uninstall pyglet
+pip install pyglet==1.5.0
+```
 
 ```python
 env = PixelObservationWrapper(gym.make(args.domain_name))
 ```
-
 
 
 ## How to run
