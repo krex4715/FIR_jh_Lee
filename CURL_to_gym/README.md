@@ -44,7 +44,7 @@ Though CURL is a raw Pixel Based Learning method, its sample efficiency was appa
 
 
 
-### Applying CURL to Gym and Comparing Performance with Dynamic State-Based SAC
+### 02. Applying CURL to Gym and Comparing Performance with Dynamic State-Based SAC
 
 **Raw Pixel Observation-Based Learning with CURL in Gym**   
 |                                  |                                                |                                                |
