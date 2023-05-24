@@ -1,10 +1,11 @@
 # CURL + Gym
 
-I used the [CURL](https://github.com/MishaLaskin/curl) algorithm to learn the agent through the Pixel value in the [gym](https://www.gymlibrary.dev/) environment.
+I implemented the [CURL](https://github.com/MishaLaskin/curl) algorithm to learn the agent.
+[CURL(Contrastive Unsupervised Representation Learning for Sample-Efficient Reinforcement Learning)](https://github.com/MishaLaskin/curl) is a learning algorithm based on Raw Pixel Observations.
+ 
+I applied the CURL algorithm in the [gym](https://www.gymlibrary.dev/) environment, which doesn't use Pixel Observation but rather Physical Information Observation. This was accomplished by utilizing the [PixelObservationWrapper](https://www.gymlibrary.dev/api/wrappers/)
 
 
-
-[PixelObservationWrapper](https://www.gymlibrary.dev/api/wrappers/) was used to receive Raw Pixel as observation, not Physical Information Observation.
 ```python
 env = PixelObservationWrapper(gym.make(args.domain_name))
 ```
@@ -21,14 +22,14 @@ bash ./script/run_pendulum.sh
 
 
 ## Result
-I compared the performance of CURL with the performance of SAC with physical Information Observation environment.
+I compared the performance of CURL with the performance of SAC in a Physical Information Observation environment.
 
-### Original CURL Performance in DM_Control
-in [CURL(Contrastive Unsupervised Representation Learning for Sample-Efficient Reinforcement Learning)](https://mishalaskin.github.io/curl/), 
-Agent was trained in [DM_Control](https://github.com/deepmind/dm_control)
+### 01. Original Performance of the CURL in DM_Control
+in [CURL](https://mishalaskin.github.io/curl/), 
+the agent was trained in [DM_Control](https://github.com/deepmind/dm_control) environment.
 
 
-**I check the performance of CURL in 'CartPole' environment of the DM_Control**
+**I checked the performance of CURL in the 'CartPole' environment of the DM_Control**
 |                                  |                                                |                                                |
 | :------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 |         `Step 5000`                |                 `Step 10000`                 |                   `Step 15000`                 |
@@ -39,26 +40,21 @@ Agent was trained in [DM_Control](https://github.com/deepmind/dm_control)
 
 
 
+Though CURL is a raw Pixel Based Learning method, its sample efficiency was apparent: the learning performance with CURL was comparable to the learning with physical information (in the case of the CartPole environment).
 
 
 
-Even CURL is raw Pixel Based Learning Methods,
-but we can see the Sample Efficient of CURL :  CURL Algorithm learning was as good as learning with physical information. (in case of CartPole)     
+### Applying CURL to Gym and Comparing Performance with Dynamic State-Based SAC
 
-
-
-
-### Applying to Gym and Comparing the performance with Dynamic State based SAC
-
-**Raw Pixel Observation Based Learning CURL in gym**   
+**Raw Pixel Observation-Based Learning with CURL in Gym**   
 |                                  |                                                |                                                |
 | :------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 |         `Step 5000`                |                 `Step 10000`                 |                   `Step 15000`                 |
 | ![step5000](./img/curl/5000.gif)   |         ![step10000](./img/curl/10000.gif)   |         ![step10000](./img/curl/15000.gif)     |
 
-Below is the [SAC](https://github.com/vy007vikas/PyTorch-ActorCriticRL) learning algorithm in the Physical Observation of [gym](https://www.gymlibrary.dev/environments/)   
+Below is the Physical Observation-Based Learning using the [SAC](https://github.com/vy007vikas/PyTorch-ActorCriticRL) learning algorithm in the [gym](https://www.gymlibrary.dev/environments/)   
    
-**Physical Observation Based Learning SAC in gym**   
+**Physical Observation-Based Learning with SAC in Gym**   
 [details of Observation](https://www.gymlibrary.dev/environments/classic_control/pendulum/)
 |                                  |                                                |                                                |
 | :------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
