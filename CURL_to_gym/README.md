@@ -11,6 +11,15 @@ env = PixelObservationWrapper(gym.make(args.domain_name))
 
 
 
+## How to run
+### Pendulum Environment
+```bash
+bash ./script/run_pendulum.sh
+```
+
+
+
+
 
 
 ***
